@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="icons/robot-head.svg" sizes="any" type="image/svg">
+    <link rel="stylesheet"type="text/css" href="css/main.css">
+    <link rel="stylesheet"type="text/css" href="css/tables.css">
+    <link rel="stylesheet"type="text/css" href="css/print.css">
+    <title>Mathy 3.0</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="splash" render="true">
+            <div class="box">
+                <div class="robot"></div>
+                <h1>Mathy 3.0</h1>
+            </div>
+        </div>
+        <div class="controllers">
+            <div class="panel">
+               
+                <div class="table_controller controller ">
+                        <div class="button table"></div>
+                        <div class="info">Cliquez pour créer un nouveau tableau</div>
+                </div>
+                <div class="spreadsheet_controller controller ">
+                        <div class="button spreadsheet"></div>
+                        <div class="info">Cliquez pour afficher votre feuille</div>
+                </div>
+                <div class="calculator_controller controller ">
+                        <div class="button calculator"></div>
+                        <div class="info">Cliquez pour afficher les résultats</div>
+                </div>
+                <div class="plus_controller controller ">
+                        <div class="button plus operator" operator="+"></div>
+                        <div class="info">Cliquez pour générer des additions</div>
+                </div>
+                <div class="minus_controller controller">
+                        <div class="button minus operator" operator="-"></div>
+                        <div class="info">Cliquez pour générer des soustractions</div>
+                </div>
+                <div class="multiply_controller controller">
+                        <div class="button multiply operator" operator="*"></div>
+                        <div class="info">Cliquez pour générer des multiplications</div>
+                </div>
+                <div class="divide_controller controller">
+                        <div class="button divide operator" operator="/"></div>
+                        <div class="info">Cliquez pour générer des divisions</div>
+                </div>
+                <div class="generate_button controller">
+                    <div class="button export"></div>
+                    <div class="info">Cliquez pour exporter votre feuille</div>
+                </div>
+                <div class="delete_all_button controller ">
+                        <div class="button bin"></div>
+                        <div class="info">Cliquez pour effacer la feuille</div>
+                </div>
+            </div>
+        </div>
+        <div class="board">
+            <div class="starter">
+                <div class="box">
+                    <div class="robot"></div>
+                    <h1>Hi! commencez par l'ajout d'un nouveau tableau</h1>
+                </div>
+            </div>
+            <div class="table_builder">
+                <div class="build_table">Cliquez pour construire avec cette configuration (7 x 10 => A4)</div>
+                <div class="area_one area">
+                    <div class="grid"></div>
+                    <div class="insert_column small_controller">Ajouter une colonne</div>
+                    <div class="columns_number number">0</div>
+                </div>
+                <div class="area_two area">
+                    <div class="grid"></div>
+                    <div class="insert_row small_controller">Ajouter une ligne</div>
+                    <div class="rows_number number">0</div>
+                </div>
+            </div>
+            <div class="tables" render="false">
+                <div class="config">
+                    <div class="config_info">1 - Déterminez un interval</div>
+                    <div class="ranges">
+                        <div class="min_range range_area">
+                            <div class="desc">MIN</div>
+                            <input type="text" class="range" value="5">
+                        </div>
+                        <div class="max_range range_area">
+                            <div class="desc">MAX</div>
+                            <input type="text" class="range" value="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="steps">
+                        <div class="step">2 - Vous pouvez donner un nom a chaque colonne</div>
+                    <div class="step">3 - Sélectionnez une ou plusieurs cellules à l'aide de votre curseur</div>
+                    <div class="step">4 - Cliquez sur l'opérateur de votre choix pour générer vos expressions</div>
+                </div>
+                <div class="editor"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/libraries/mathJs/math.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/table-builder.js"></script>
+    <script src="/js/tables.js"></script>
+    <script src="/js/core.js"></script>
+</body>
+</html>
